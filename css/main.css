@@ -105,3 +105,28 @@ footer {
 .social__link:focus {
   opacity: 0.5;
 }
+
+@media (min-width: 800px) {
+  body {
+    margin: 0;
+  }
+
+  .main-grid {
+    display: grid;
+    grid-template-columns:
+      minmax(1em, 1fr)
+      repeat(3, minmax(10rem, 30rem))
+      minmax(1em, 1fr);
+    gap: 2em;
+  }
+
+  header {
+    grid-column: 2 / 5;
+  }
+  main {
+    grid-column: 2 / -1;
+  }
+  footer {
+    grid-column: 2 / 3;
+  }
+}
